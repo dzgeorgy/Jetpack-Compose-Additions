@@ -39,9 +39,7 @@ fun PagingIndicator(
     //Diameter of dot
     val height = radius * 2
 
-    Canvas(modifier = Modifier
-        .size(width, height)
-        .background(activeColor.copy(alpha = 0.12f))) {
+    Canvas(modifier = Modifier.size(width, height)) {
         for (i in 0 until pages)
             drawCircle(color = if (i == active) activeColor else color,
                 radius = radius.toPx(),
